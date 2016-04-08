@@ -36,7 +36,7 @@
                     </ul>
                 </nav>
                 <div id="nav-trigger">
-                    <span><img src="images/menu_icon.png"/></span>
+                    <span><img src="images/menu.png"/></span>
                 </div>
                 <nav id="nav-mobile"></nav>
             </div>

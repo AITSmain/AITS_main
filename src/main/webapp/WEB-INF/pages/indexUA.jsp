@@ -42,7 +42,7 @@
                 
               
                 <div id="nav-trigger">
-                    <span><img src="images/menu_icon.png"/></span>
+                    <span><img src="images/menu.png"/></span>
                 </div>
             </div>
 	</header>
@@ -140,7 +140,7 @@
                             </ul>
                         </section>
                     </li>
-                     
+                    <!--
                     <li class="slide">
                         <div class="descr-block">
                             <h1>Carpathian  Tourist Road</h1>
@@ -152,7 +152,7 @@
                             <img src="portfolio/ctrNew.png" />
                         </div>
                         <a class="view-source view-sourceDisplayNone" href="http://www.carpathianroad.com/" target="_blank"></a>
-                    </li> <!--  
+                    </li> 
                     <li class="slide">
                         <div class="descr-block">
                             <h1>Back-офіс <br><span style="font-size: 16px;">(Carpathian  Tourist Road)</span></h1>
@@ -248,10 +248,10 @@
             </div>
            <div class="text-block-contacts">
                 <p>
-                    ТОВ “ПЕРЕДОВІ ІТ СИСТЕМИ”<br/></br>
-                    м.Ужгород, вул. К. Міксата, 15<br/></br>
                     СЕРГІЙ ЗАВІДФОЛУШІ<br/>
-                    <span style="font-size: 18px">директор</span>
+                    <span style="font-size: 18px">директор</span><br/><br/>
+                    ТОВ Передові ІТ Системи<br/>
+                    88015, м.Ужгород<br/> вул. К.Міксата, 15<br/><br/>                  
                 </p>
         </div>
               
