@@ -50,7 +50,7 @@
                 <a><span class="arrow-red"></span></a>
             </div>
             <div class="main-text-block">
-                Advanced Information Technology Systems is a software developer for businesses.
+                Advanced Information Technology Systems <br/>is a software developer for businesses.
             </div>
             <div class="second-text-block">
                 We provide modern integrated IT solutions to meet the diverse needs of customers and the necessary IT support for your business.
@@ -60,6 +60,10 @@
     </section>
     <section id="what-we-do">
         <div class="portfolio-block">
+            <div class="main-header-block-portfolio">
+                <h3 class="main-header-block">Portfolio</h3>
+                <a><span class="arrow-red"></span></a>
+            </div>
             <div class="slidewrap" data-autorotate="5000">
                 <ul class="slidecontrols">
                     <li><a href="#sliderName" class="prev"><div class="portfolio-left-arrow"></div></a></li>
@@ -122,20 +126,7 @@
                         </section>
                     </li>
                     
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1>Carpathian  Tourist Road</h1>
-                            <p>
-                                Tourist portal with a deep structure that is designed based on Java EE platform and framework Spring MVC.<br/>
-                                The project has a variety of features and effortlessly allows you to choose the best route to travel.
-                            </p>
-                            <a class="view-source" href="http://www.carpathianroad.com/" target="_blank">View Project</a>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/ctrNew.png" />
-                        </div>
-                        <a class="view-source view-sourceDisplayNone" href="http://www.carpathianroad.com/" target="_blank">View Project</a>
-                    </li>
+                    
                     <!--
                     <li class="slide">
                         <div class="descr-block">
@@ -202,7 +193,7 @@
                 <a><span class="arrow-red"></span></a>
             </div>
             <div class="main-text-block">
-                We create optimal solutions based on modern technologies.
+                We create optimal solutions <br/>based on modern technologies.
             </div>
             <div class="images-blocks">
                 <div class="single-block">
@@ -210,7 +201,7 @@
                         <img src="images/hosting.png"/>
                     </div>
                     <p class="main-title">PaaS provider</p>
-                    <p class="descr">Windows Server 2012 Hyper-V and VMware vSphere 5.1</p>
+                    <p class="descr">VMware vSphere </br>and Microsoft Hyper-V</p>
                 </div>
                 <div class="single-block">
                     <div class="servivesImageDiv">
@@ -236,13 +227,13 @@
                 <a><span class="arrow-red"></span></a>
             </div>
             <div class="text-block-contacts">               
-                    <p>
-                        Ltd. “ADVANCED IT SYSTEMS”<br/>
-                        88015 Uzhgorod<br/>K. MIKSATA STR. 15<br/><br/>
+                    <p>                      
                         SERGII ZAVIDFOLUSHI<br/>
-                        DIRECTOR@AITS.UA<br/><br/>
+                        <span style="font-size: 16px">director</span><br/><br/>
                         ROBERT JURKO<br/>
-                        JURKO@ROOFIN.EU
+                        <span style="font-size: 16px">comercial director</span><br/><br/>
+                        Advanced IT Systems ltd<br/>
+                        88015 Uzhgorod<br/>K.Miksata str. 15<br/><br/>
                     </p>
             </div>
            
