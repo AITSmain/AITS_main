@@ -213,7 +213,7 @@
                 <a><span class="arrow-red"></span></a>
             </div>
             <div class="main-text-block">
-                Створюємо оптимальні рішення на основі сучасних технологій.
+                Створюємо оптимальні рішення </br>на основі сучасних технологій.
             </div>       
             <div class="images-blocks">
                 <div class="single-block">
@@ -221,7 +221,7 @@
                         <img src="images/hosting.png"/>
                     </div>
                     <p class="main-title">PaaS провайдер</p>
-                    <p class="descr">Windows Server 2012 Hyper-V and VMware vSphere 5.1</p>
+                    <p class="descr">VMware vSphere </br>and Microsoft Hyper-V</p>
                 </div>
                 <div class="single-block">
                     <div class="servivesImageDiv">
