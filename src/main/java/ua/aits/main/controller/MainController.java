@@ -20,6 +20,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  *
@@ -28,22 +29,15 @@ import javax.mail.internet.MimeMessage;
 @Controller
 @Scope("session")
 public class MainController {
-    @RequestMapping(value = {"/","/index", "/main", "/home"}, method = RequestMethod.GET)
-    public ModelAndView index(HttpServletRequest request, HttpServletResponse response)  {
+    @RequestMapping(value = {"/","/{lan}/index", "/{lan}/main", "/{lan}/home"}, method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable("lan") String lan, HttpServletRequest request, HttpServletResponse response)  {
         String currentURL = request.getServerName().toLowerCase();
-        String index;
-        String activeEN = "";
+        String index = "indexEN";
+        String activeEN = "active";
         String activeUA = "";
-        if(currentURL.contains("aits.ua")){
+        if("ua".equals(lan.toLowerCase())){
             index = "indexUA";
-            activeUA = "active";
-        }
-        else if(currentURL.contains("aits.sk")){
-            index = "indexEN";
-            activeEN = "active";
-        }
-        else {
-            index = "indexUA";
+            activeEN = "";
             activeUA = "active";
         }
         ModelAndView model = new ModelAndView(index);
@@ -75,8 +69,8 @@ public class MainController {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String text = request.getParameter("text");
-        final String username = "develop@aits.ua";
-        final String password = "sa24er94240894";
+        final String username = "robot@aits.ua";
+        final String password = "37Rh!_09=S/U";
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
@@ -90,8 +84,8 @@ public class MainController {
         try {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(email));
-            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("director@aits.ua"));
-            message.setSubject("Vacancy mail from site");
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("sirakandrew@gmail.com"));
+            message.setSubject("Mail from site");
             message.setText("Name: "+name
                     + "\nEmail: " + email 
                     + "\n\n" + text);

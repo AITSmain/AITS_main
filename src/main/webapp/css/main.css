@@ -138,7 +138,7 @@ font-size: 50px;
 .language-block li a {
 color: #d3e0e4;
 }
-.language-block li.active {
+.language-block li.active a {
 color: #790000;
 }
 #about-us {

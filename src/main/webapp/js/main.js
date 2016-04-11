@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-var url = "/";
+var url = "/AITS/";
 var showMenu = false;
 $(document).ready(function() {
     $("#nav-mobile").html($("#nav-main").html());

@@ -13,8 +13,8 @@
         <title>AITS</title>
         <meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <link rel="shortcut icon" type="image/png" href="./images/favicon.ico"/>
-        <link href="./css/main.css" rel="stylesheet" media="all">
+        <link rel="shortcut icon" type="image/png" href="/AITS/images/favicon.ico"/>
+        <link href="/AITS/css/main.css" rel="stylesheet" media="all">
     </head>
     <body class="en">
         <header role="banner">
@@ -22,21 +22,21 @@
                 <div class="logo-block">
                     <a class="brand smooth-link" href="#about-us">AITS</a>
                 </div>
-                <div class="mobileIcon"><img src="images/menu.png"></div>
+                <div class="mobileIcon"><img src="/AITS/images/menu.png"></div>
                 <ul class="language-block">
-                    <li class="${activeUA}"><a href="http://www.aits.ua/">UA</a></li>
-                    <li class="${activeEN}"><a href="http://www.aits.sk/">EN</a></li>
+                    <li class="${activeUA}"><a href="/AITS/ua/index">UA</a></li>
+                    <li class="${activeEN}"><a href="/AITS/en/index">EN</a></li>
                 </ul>
                 <nav role="navigation" id="nav-main">
                     <ul class="navbar">
                         <li class="active" id="about-us-menu-item"><a href="#about-us">About us</a></li>
-                        <li id="what-we-do-menu-item"><a href="#what-we-do">What we do</a></li>
+                        <li id="what-we-do-menu-item"><a href="#what-we-do">Portfolio</a></li>
                         <li id="services-menu-item"><a href="#services">Services</a></li>
                         <li id="contacts-menu-item"><a href="#contacts">Contacts</a></li>
                     </ul>
                 </nav>
                 <div id="nav-trigger">
-                    <span><img src="images/menu.png"/></span>
+                    <span><img src="/AITS/images/menu.png"/></span>
                 </div>
                 <nav id="nav-mobile"></nav>
             </div>
@@ -109,16 +109,16 @@
                         <section id="slider" class="container">
                             <ul class="slider-wrapper">
                             <li class="current-slide">
-                                    <img src="portfolio/1.png" title="" alt="">
+                                    <img src="/AITS/portfolio/1.png" title="" alt="">
                             </li>
                             <li>
-                                    <img src="portfolio/2.png" title="" alt="">
+                                    <img src="/AITS/portfolio/2.png" title="" alt="">
                             </li>
                             <li>
-                                    <img src="portfolio/3.png" title="" alt="">
+                                    <img src="/AITS/portfolio/3.png" title="" alt="">
                             </li>
                             <li>
-                                    <img src="portfolio/4.png" title="" alt="">
+                                    <img src="/AITS/portfolio/4.png" title="" alt="">
                             </li>
                             </ul>
                             <ul id="control-buttons" class="control-buttons">
@@ -198,21 +198,21 @@
             <div class="images-blocks">
                 <div class="single-block">
                     <div class="servivesImageDiv">
-                        <img src="images/hosting.png"/>
+                        <img src="/AITS/images/hosting.png"/>
                     </div>
                     <p class="main-title">PaaS provider</p>
                     <p class="descr">VMware vSphere </br>and Microsoft Hyper-V</p>
                 </div>
                 <div class="single-block">
                     <div class="servivesImageDiv">
-                        <img src="images/web.png"/>
+                        <img src="/AITS/images/web.png"/>
                     </div>
                     <p class="main-title">WEB DEVELOPMENT</p>
                     <p class="descr">Java; Java EE; Spring MVC, Apache Tomcat (8.0), Oracle JDK, MySQL</p>
                 </div>
                 <div class="single-block">
                     <div class="servivesImageDiv">
-                        <img src="images/1c.png" class="image-1c"/>
+                        <img src="/AITS/images/1c.png" class="image-1c"/>
                     </div>
                     <p class="main-title">1C PLATFORM</p>
                     <p class="descr">1С: Enterprise Version 8.3</p>
@@ -260,7 +260,7 @@
         <div id="mail-loading" class="side-block contacts-right-block">
             <div class="text-block-contacts">
                 <div class="main-text-block">
-                    <img class="loading-gif" src="images/loading-x.gif" />
+                    <img class="loading-gif" src="/AITS/images/loading-x.gif" />
                 </div>
             </div>
         </div>
@@ -269,7 +269,7 @@
                 <div class="main-text-block">
                     Your letter went to our mailbox, thanks. <br/>
                     Please wait.<br/>
-                    <img class="loading-gif" src="images/loading-x.gif" />
+                    <img class="loading-gif" src="/AITS/images/loading-x.gif" />
                 </div>
             </div>
         </div>
@@ -282,11 +282,11 @@
                 <h3 class="main-header-block">Partners</h3>
                 <a><span class="arrow-red"></span></a>
                 <ul>
-                    <li><a target="_blank" href="http://www.wienerberger.com/"><img class="vert" src="images/winer.png"/></a></li>
-                    <li><a target="_blank" href="http://www.fischersports.com.ua/"><img class="vert" src="images/fisher.png"/></a></li>
-                    <li><a target="_blank" href="http://www.energo.uz.ua/"><img class="vert" src="images/zoe.png"/></a></li>
-                    <li><a target="_blank" href="http://www.tondach.com/"><img class="vert" src="images/tondach.png"/></a></li>
-                    <li><a target="_blank" href="http://zet.com.ua/"><img class="vert" src="images/zet.png"/></a></li>
+                    <li><a target="_blank" href="http://www.wienerberger.com/"><img class="vert" src="/AITS/images/winer.png"/></a></li>
+                    <li><a target="_blank" href="http://www.fischersports.com.ua/"><img class="vert" src="/AITS/images/fisher.png"/></a></li>
+                    <li><a target="_blank" href="http://www.energo.uz.ua/"><img class="vert" src="/AITS/images/zoe.png"/></a></li>
+                    <li><a target="_blank" href="http://www.tondach.com/"><img class="vert" src="/AITS/images/tondach.png"/></a></li>
+                    <li><a target="_blank" href="http://zet.com.ua/"><img class="vert" src="/AITS/images/zet.png"/></a></li>
                 </ul>
             </div>
             <div class="copyright">
@@ -295,7 +295,7 @@
 	</footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-        <script src="./js/plugin.js"></script>
-        <script src="./js/main.js"></script>
+        <script src="/AITS/js/plugin.js"></script>
+        <script src="/AITS/js/main.js"></script>
     </body>
 </html>
