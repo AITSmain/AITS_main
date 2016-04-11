@@ -81,14 +81,14 @@ function IsEmail(email) {
   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   return regex.test(email);
 }
-$(".mail-us").click(function(){
+/*$(".mail-us").click(function(){
     $("#mail-block").fadeOut("slow", function() {
-    $("#mail-form").fadeIn("slow");
+    $("#form-div").fadeIn("slow");
     });
-});
+});*/
 $("#button-blue").click(function (){
-    $('#mail-form input:not(#button-blue)').css("border","none");
-    $('#mail-form textarea').css("border","none");
+    $('#form-div input:not(#button-blue)').css("border","none");
+    $('#form-div textarea').css("border","none");
     $("#button-blue").prop('disabled', true);
     $(".validation").html("");
     var validation = true;
@@ -99,7 +99,7 @@ $("#button-blue").click(function (){
         validation = false;
     }
     if(validation){
-        $("#mail-form").fadeOut("fast", function() {
+        $("#form-div").fadeOut("fast", function() {
             $("#mail-loading").fadeIn("fast");
         });
         var name = replaceChar($("#name").val());
@@ -112,7 +112,7 @@ $("#button-blue").click(function (){
             success: function(response){
                 if(response === "" || response === null){
                     $("#mail-loading").fadeOut("fast", function() {
-                        $("#mail-form").fadeIn("fast");
+                        $("#form-div").fadeIn("fast");
                     });
                     $(".validation").html("Something goes wrong with sending mail. Try again later.");
                     $("#button-blue").prop('disabled', false);
@@ -123,7 +123,7 @@ $("#button-blue").click(function (){
                         $("#button-blue").prop('disabled', false);
                         setTimeout(function() { 
                         $("#mail-complete").fadeOut("slow", function() {
-                            $("#mail-block").fadeIn("slow");
+                            $("#form-div").fadeIn("slow");
                         });
                         }, 3000);
                     });
@@ -131,7 +131,7 @@ $("#button-blue").click(function (){
             }, 
             error: function(response){ 
                 $("#mail-loading").fadeOut("fast", function() {
-                    $("#mail-form").fadeIn("fast");
+                    $("#form-div").fadeIn("fast");
                 });
                 $(".validation").html("Something goes wrong with sending mail. Try again later.");
                 $("#button-blue").prop('disabled', false);
@@ -141,11 +141,11 @@ $("#button-blue").click(function (){
     else {
         $(".validation").html("Fill all fields correctly, please.");
         $("#button-blue").prop('disabled', false);
-        $('#mail-form input:text').filter(function(){
+        $('#form-div input:text').filter(function(){
             return $.trim(this.value).length == 0;
         }).css("border","1px solid red");
-        $('#mail-form textarea').filter(function(){
-            return $.trim($("#mail-form textarea").val()).length == 0;
+        $('#form-div textarea').filter(function(){
+            return $.trim($("#form-div textarea").val()).length == 0;
         }).css("border","1px solid red");
     }
 });   
