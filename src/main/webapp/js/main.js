@@ -123,6 +123,9 @@ $("#button-blue").click(function (){
                         $("#button-blue").prop('disabled', false);
                         setTimeout(function() { 
                         $("#mail-complete").fadeOut("slow", function() {
+                            $("#name").val("");
+                            $("#email").val("");
+                            $("#comment").val("");
                             $("#form-div").fadeIn("slow");
                         });
                         }, 3000);

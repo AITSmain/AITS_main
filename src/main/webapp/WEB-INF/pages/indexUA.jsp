@@ -14,8 +14,8 @@
         <title>AITS</title>
         <meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <link rel="shortcut icon" type="image/png" href="/AITS/images/favicon.ico"/>
-        <link href="/AITS/css/main.css" rel="stylesheet" media="all">
+        <link rel="shortcut icon" type="image/png" href="${Constants.URL}images/favicon.ico"/>
+        <link href="${Constants.URL}css/main.css" rel="stylesheet" media="all">
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 
     </head>
@@ -25,7 +25,7 @@
                 <div class="logo-block">
                     <a class="brand smooth-link" href="#about-us">AITS</a>
                 </div>
-                <div class="mobileIcon"><img src="/AITS/images/menu.png"></div>
+                <div class="mobileIcon"><img src="${Constants.URL}images/menu.png"></div>
                
                 <nav role="navigation" id="nav-main">
                     <ul class="navbar">
@@ -36,13 +36,13 @@
                     </ul>
                 </nav>
                 <ul class="language-block">
-                    <li class="${activeUA}"><a href="/AITS/ua/index">UA</a></li>
-                    <li class="${activeEN}"><a href="/AITS/en/index">EN</a></li>
+                    <li class="${activeUA}"><a href="${Constants.URL}ua/index">UA</a></li>
+                    <li class="${activeEN}"><a href="${Constants.URL}en/index">EN</a></li>
                 </ul>
                 
               
                 <div id="nav-trigger">
-                    <span><img src="/AITS/images/menu.png"/></span>
+                    <span><img src="${Constants.URL}images/menu.png"/></span>
                 </div>
             </div>
 	</header>
@@ -124,16 +124,16 @@
                         <section id="slider" class="container">
                             <ul class="slider-wrapper">
                             <li class="current-slide">
-                                    <img src="/AITS/portfolio/1.png" title="" alt="">
+                                    <img src="${Constants.URL}portfolio/1.png" title="" alt="">
                             </li>
                             <li>
-                                    <img src="/AITS/portfolio/2.png" title="" alt="">
+                                    <img src="${Constants.URL}portfolio/2.png" title="" alt="">
                             </li>
                             <li>
-                                    <img src="/AITS/portfolio/3.png" title="" alt="">
+                                    <img src="${Constants.URL}portfolio/3.png" title="" alt="">
                             </li>
                             <li>
-                                    <img src="/AITS/portfolio/4.png" title="" alt="">
+                                    <img src="${Constants.URL}portfolio/4.png" title="" alt="">
                             </li>
                             </ul>
                             <ul id="control-buttons" class="control-buttons">
@@ -218,21 +218,21 @@
             <div class="images-blocks">
                 <div class="single-block">
                     <div class="servivesImageDiv">
-                        <img src="/AITS/images/hosting.png"/>
+                        <img src="${Constants.URL}images/hosting.png"/>
                     </div>
                     <p class="main-title">PaaS провайдер</p>
                     <p class="descr">VMware vSphere </br>and Microsoft Hyper-V</p>
                 </div>
                 <div class="single-block">
                     <div class="servivesImageDiv">
-                        <img src="/AITS/images/web.png"/>
+                        <img src="${Constants.URL}images/web.png"/>
                     </div>
                     <p class="main-title">WEB Розробка</p>
                     <p class="descr">Java; Java EE; Spring MVC, Apache Tomcat (8.0), Oracle JDK, MySQL</p>
                 </div>
                 <div class="single-block">
                     <div class="servivesImageDiv">
-                        <img src="/AITS/images/1c.png" class="image-1c"/>
+                        <img src="${Constants.URL}images/1c.png" class="image-1c"/>
                     </div>
                     <p class="main-title">1C платформа</p>
                     <p class="descr">1С: Enterprise Version 8.3</p>
@@ -279,7 +279,7 @@
         <div id="mail-loading" class="side-block contacts-right-block">
             <div class="text-block-contacts">
                 <div class="main-text-block">
-                    <img class="loading-gif" src="/AITS/images/loading-x.gif" />
+                    <img class="loading-gif" src="${Constants.URL}images/loading-x.gif" />
                 </div>
             </div>
         </div>
@@ -288,7 +288,7 @@
                 <div class="main-text-block">
                     Ваш лист відправлено. <br/>
                     Зачекайте хвилинку.<br/>
-                    <img class="loading-gif" src="/AITS/images/loading-x.gif" />
+                    <img class="loading-gif" src="${Constants.URL}images/loading-x.gif" />
                 </div>
             </div>
         </div>
@@ -300,11 +300,11 @@
                 <h3 class="main-header-block">Партнери</h3>
                 <a><span class="arrow-red"></span></a>
                 <ul>
-                    <li><a target="_blank" href="http://www.wienerberger.com/"><img class="vert" src="/AITS/images/winer.png"/></a></li>
-                    <li><a target="_blank" href="http://www.fischersports.com.ua/"><img class="vert" src="/AITS/images/fisher.png"/></a></li>
-                    <li><a target="_blank" href="http://www.energo.uz.ua/"><img class="vert" src="/AITS/images/zoe.png"/></a></li>
-                    <li><a target="_blank" href="http://www.tondach.com/"><img class="vert" src="/AITS/images/tondach.png"/></a></li>
-                    <li><a target="_blank" href="http://zet.com.ua/"><img class="vert" src="/AITS/images/zet.png"/></a></li>
+                    <li><a target="_blank" href="http://www.wienerberger.com/"><img class="vert" src="${Constants.URL}images/winer.png"/></a></li>
+                    <li><a target="_blank" href="http://www.fischersports.com.ua/"><img class="vert" src="${Constants.URL}images/fisher.png"/></a></li>
+                    <li><a target="_blank" href="http://www.energo.uz.ua/"><img class="vert" src="${Constants.URL}images/zoe.png"/></a></li>
+                    <li><a target="_blank" href="http://www.tondach.com/"><img class="vert" src="${Constants.URL}images/tondach.png"/></a></li>
+                    <li><a target="_blank" href="http://zet.com.ua/"><img class="vert" src="${Constants.URL}images/zet.png"/></a></li>
                 </ul>
             </div>
             <div class="copyright">
@@ -314,7 +314,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-        <script src="/AITS/js/plugin.js"></script>
-        <script src="/AITS/js/main.js"></script>
+        <script src="${Constants.URL}js/plugin.js"></script>
+        <script src="${Constants.URL}js/main.js"></script>
     </body>
 </html>

@@ -84,7 +84,7 @@ public class MainController {
         try {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(email));
-            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("sirakandrew@gmail.com"));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("director@aits.ua"));
             message.setSubject("Mail from site");
             message.setText("Name: "+name
                     + "\nEmail: " + email 

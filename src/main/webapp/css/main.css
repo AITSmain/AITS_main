@@ -478,15 +478,22 @@ width: 10%;
     display: block;
 }
 #mail-complete {
-    display: none;
+    display: none;    position: relative;
+    width: 460px;
+    margin-right: 150px;
+    float: right;
 }
 #mail-loading {
-    display: none;
+    display: none;    position: relative;
+    width: 460px;
+    margin-right: 150px;
+    float: right;
 }
 #mail-complete .main-text-block {
     font-size: 25px;
     text-align: center;
-    color: #fff;
+    color: #16272C;
+    width: 370px;
 }
 .loading-gif {
     width: 200px;
