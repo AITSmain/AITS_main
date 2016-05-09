@@ -56,6 +56,14 @@ public class SystemController {
         return model;
     }
     
+    @RequestMapping(value = {"/AITS/system/logout.do","/system/logout.do", "/AITS/system/logout.do/","/system/logout.do/"})
+    public ModelAndView logout(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        request.setCharacterEncoding("UTF-8");
+        HttpSession session = request.getSession(false);
+        if (session != null) { session.invalidate(); }
+        return new ModelAndView("redirect:" + "/system/login"); 
+    } 
+    
     @RequestMapping(value = {"/AITS/system/add", "/system/add", "/AITS/system/add/", "/system/add/"}, method = RequestMethod.GET)
     public ModelAndView projectAdd(HttpServletRequest request, HttpServletResponse response) throws Exception {
     	ModelAndView model = new ModelAndView("/system/add");
