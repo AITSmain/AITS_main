@@ -153,7 +153,7 @@
         data.append('upload', $(this).get(0).files[i]);
         data.append("path", "files/gallery");
         jQuery.ajax({
-                    url: '${Constants.URL}system/uploadFile',
+                    url: '${Constants.URL}system/uploadFile;jsessionid=<c:out value="${pageContext.session.id}"/>"',
                     data: data,
                     cache: false,
                     contentType: false,
@@ -176,7 +176,7 @@
     }
     function deleteFile(temp){
         jQuery.ajax({
-            url: '${Constants.URL}system/do/removefile',
+            url: '${Constants.URL}system/do/removefile;jsessionid=<c:out value="${pageContext.session.id}"/>"',
             cache: false,
             contentType: false,
             processData: false,
