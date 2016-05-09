@@ -16,6 +16,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link rel="shortcut icon" type="image/png" href="${Constants.URL}images/favicon.ico"/>
         <link href="${Constants.URL}css/main.css" rel="stylesheet" media="all">
+        <link href="${Constants.URL}css/jquery.bxslider.css" rel="stylesheet" />
+        <link href="//cdn.rawgit.com/noelboss/featherlight/1.4.1/release/featherlight.min.css" type="text/css" rel="stylesheet" />
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -107,35 +109,23 @@
                         </div>
                         </li>
                     -->
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1 class="obl-h">Library PJSC "Zakarpattyaoblenergo"</h1>
-                            <p>
-                                The project is designed to organize the conservation and use of heterogeneous collections of electronic documents in the company. 
-                            </p>
-                            <p>
-                                Flexible to set up the system partition and access allows without unnecessary problems manage electronic documents in various formats (text, graphics, etc.), and set access rights in a convenient form for different user groups.
-                            </p>
-                        </div>
-                        <section id="slider" class="container">
-                            <ul class="slider-wrapper">
-                            <li class="current-slide">
-                                    <img src="${Constants.URL}portfolio/1.png" title="" alt="">
-                            </li>
-                            <li>
-                                    <img src="${Constants.URL}portfolio/2.png" title="" alt="">
-                            </li>
-                            <li>
-                                    <img src="${Constants.URL}portfolio/3.png" title="" alt="">
-                            </li>
-                            <li>
-                                    <img src="${Constants.URL}portfolio/4.png" title="" alt="">
-                            </li>
-                            </ul>
-                            <ul id="control-buttons" class="control-buttons">
-                            </ul>
-                        </section>
-                    </li>
+                    <c:forEach items="${projects}" var="item">
+                        <li class="slide">
+                            <div class="descr-block">
+                                <h1 class="obl-h">${item.project_name_en}</h1>
+                                <p>${item.project_descr_en}</p>   
+                            </div>
+                            <section id="slider-${item.project_id}" class="container slider-main">
+                                <div class="bxslider">
+                                        <c:forEach items="${item.project_img}" var="img">
+                                    <li class="current-slide">
+                                        <a href="${Constants.URL}${img}" data-featherlight="image"><img src="${Constants.URL}${img}" title="" alt=""></a>
+                                    </li>
+                                </c:forEach> 
+                                    </div>
+                            </section>
+                        </li>
+                    </c:forEach>
                     
                     
                     <!--
@@ -241,8 +231,8 @@
                     <p>                      
                         SERGII ZAVIDFOLUSHI<br/>
                         <span style="font-size: 16px">director</span><br/><br/>
-                        ROBERT JURKO<br/>
-                        <span style="font-size: 16px">comercial director</span><br/><br/>
+                        Loreta Lutak<br/>
+                        <span style="font-size: 16px">custom manager</span><br/><br/>
                         Advanced IT Systems ltd<br/>
                         88015 Uzhgorod<br/>K.Miksata str. 15<br/><br/>
                     </p>
@@ -305,8 +295,11 @@
             </div>
 	</footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="${Constants.URL}js/plugin.js"></script>
+        <script src="${Constants.URL}js/jquery.bxslider.min.js"></script>
+        <script src="//cdn.rawgit.com/noelboss/featherlight/1.4.1/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="${Constants.URL}js/main.js"></script>
     </body>
 </html>

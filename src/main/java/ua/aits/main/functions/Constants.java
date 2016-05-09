@@ -12,6 +12,7 @@ package ua.aits.main.functions;
 public class Constants
 {
     public static final String URL = "/AITS/";
+    public static final String home = "/home/kiwi/Development/NetBeansProjects/AITS_main/src/main/webapp/"; 
     
     public static final String DB_DRIVER = "com.mysql.jdbc.Driver";
     public static final String DB_CONNECTION_STRING = "jdbc:mysql://localhost:3306/aits?characterEncoding=UTF-8";

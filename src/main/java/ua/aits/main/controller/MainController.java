@@ -5,6 +5,7 @@
  */
 package ua.aits.main.controller;
 
+import java.sql.SQLException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Scope;
@@ -21,6 +22,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import org.springframework.web.bind.annotation.PathVariable;
+import ua.aits.main.model.ProjectModel;
 
 /**
  *
@@ -29,8 +31,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 @Scope("session")
 public class MainController {
+    
+    ProjectModel Projects = new ProjectModel();
     @RequestMapping(value = {"/","/{lan}/index", "/{lan}/main", "/{lan}/home"}, method = RequestMethod.GET)
-    public ModelAndView index(@PathVariable("lan") String lan, HttpServletRequest request, HttpServletResponse response)  {
+    public ModelAndView index(@PathVariable("lan") String lan, HttpServletRequest request, HttpServletResponse response) throws SQLException  {
         String currentURL = request.getServerName().toLowerCase();
         String index = "indexEN";
         String activeEN = "active";
@@ -43,17 +47,20 @@ public class MainController {
         ModelAndView model = new ModelAndView(index);
         model.addObject("activeUA", activeUA);
         model.addObject("activeEN", activeEN);
+        model.addObject("projects", Projects.getAllProjects());
         model.addObject("url", currentURL);
         return model;
     }
     @RequestMapping(value = {"/indexEN"}, method = RequestMethod.GET)
-    public ModelAndView indexEN(HttpServletRequest request, HttpServletResponse response)  {
+    public ModelAndView indexEN(HttpServletRequest request, HttpServletResponse response) throws SQLException  {
         ModelAndView model = new ModelAndView("indexEN");
+        model.addObject("projects", Projects.getAllProjects());
         return model;
     }
     @RequestMapping(value = {"/indexUA"}, method = RequestMethod.GET)
-    public ModelAndView indexUA(HttpServletRequest request, HttpServletResponse response)  {
+    public ModelAndView indexUA(HttpServletRequest request, HttpServletResponse response) throws SQLException  {
         ModelAndView model = new ModelAndView("indexUA");
+        model.addObject("projects", Projects.getAllProjects());
         return model;
     }
     @RequestMapping(value = {"/formBuilder"}, method = RequestMethod.GET)
