@@ -53,7 +53,7 @@
       <ul class="nav nav-pills navbar-left">
         <li id="index">
             <a href="<c:url value="/system/index" />">
-                <span>Projects</span>
+                <span>Portfolio</span>
             </a>
         </li>
       </ul>

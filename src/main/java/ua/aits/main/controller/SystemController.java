@@ -105,7 +105,9 @@ public class SystemController {
     	String textEN = request.getParameter("textEN");
     	String textUA = request.getParameter("textUA");
         String files_data = request.getParameter("gallery-items");
-        files_data = files_data.substring(0, files_data.length()-1);
+        if( !"".equals(files_data) && files_data != null) {
+            files_data = files_data.substring(0, files_data.length()-1);
+        }
     	String id = Projects.insertProject(titleEN, titleUA, textEN, textUA, files_data);
     	return new ModelAndView("redirect:" + "/system/index");
     }
@@ -119,7 +121,9 @@ public class SystemController {
     	String textEN = request.getParameter("textEN");
     	String textUA = request.getParameter("textUA");
         String files_data = request.getParameter("gallery-items");
-        files_data = files_data.substring(0, files_data.length()-1);
+        if( !"".equals(files_data) && files_data != null) {
+            files_data = files_data.substring(0, files_data.length()-1);
+        }
     	Projects.updateProject(project_id, titleEN, titleUA, textEN, textUA, files_data);
     	return new ModelAndView("redirect:" + "/system/index");
     }

@@ -29,7 +29,6 @@
                                 	<tr>
                                     	<th class="text-center" style="width:3%">#</th>
                                     	<th style="width:40%">Title</th>
-                                    	<th class="text-center" style="width:10%">Languages</th>
                                     	<th style="width:3%;"></th>
                                         <c:if test="${category != '0'}">
                                             <th style="width:3%;"></th>
@@ -45,7 +44,6 @@
                                             <tr class="table-item">
                                                 <td class="text-center counter">${count}</td>
                                                 <td><a href="<c:url value="/system/edit/${item.project_id}"/>">${item.project_name_en}</a></td>
-                                                <td class="text-center">${item.project_lang}</td>
                                                 <td class="text-center"><a href="<c:url value="/system/edit/${item.project_id}"/>"><img class="article-buttons" src="${Constants.URL}images/edit.png" /></a></td>
                                                 <td class="text-center"><a href="<c:url value="/system/delete/${item.project_id}"/>"><img class="article-buttons" src="${Constants.URL}images/delete.png" /></a></td>
                                             </tr>

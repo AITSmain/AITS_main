@@ -1357,6 +1357,9 @@ margin-top: 100px;}
     .ua nav#nav-main{
         width: 100%;
     }
+    .bx-wrapper .bx-pager {
+        margin-bottom: 20px;
+    }
 }
 @media all and (max-device-width: 720px) {
     header{
@@ -1465,6 +1468,10 @@ margin-top: 100px;}
     
     .descr-block{
         margin-bottom: 0;
+    }
+    
+    .bx-wrapper .bx-pager {
+        margin-bottom: 20px;
     }
 }
 .rotate-to-90 {

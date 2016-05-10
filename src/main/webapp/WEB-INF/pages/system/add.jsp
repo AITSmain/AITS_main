@@ -9,6 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <t:systempage>
+    <link rel="stylesheet" href="${Constants.URL}css/ckeditor.css" type="text/css" />  
     <div class="margintop20">
         <h4>Add project</h4>
         <ol class="breadcrumb">
@@ -16,7 +17,7 @@
                 <a href="#" data-toggle="modal" data-target="#shureModal"> <i class="fa fa-fw fa-list-alt"></i> Back to main menu</a>
             </li>
         </ol>
-	<form action="<c:url value="/system/do/insertdata" />" name="addArticleForm" id="addForm" method="POST" type="multipart/form-data">
+	<form action="<c:url value="/system/do/insertdata"/>" name="addArticleForm" id="addForm" method="POST" type="multipart/form-data">
             <input type="hidden" name="dir" id="dir-name" value="${folder}" />
             <input type="hidden" name="gallery-items" id="gallery-items-input" />
             <div class="row add-row">
@@ -92,12 +93,14 @@
         </div>
     </div>
 </t:systempage>
+    <script src="${Constants.URL}js/ckeditor/ckeditor.js"></script>
 <script> 
     $(document).ready(function () {
         var currentLang = $(".lang-switch-text button.active").attr("id");
         $(".textareas .textarea-msg[lang='"+currentLang+"']").show();
         var currentLangT = $(".lang-switch-title button.active").attr("id");
         $(".input-title-lang[lang='"+currentLangT+"']").show();
+        initCKE();
     });
     
     $(".lang-switch-text button").click(function(){
@@ -133,7 +136,7 @@
                 $("#gallery-items-input").val($("#gallery-items-input").val() + 
                         ""+$(this).find(".main-img").attr("realpath") +",");
             });
-            $("#addForm").submit();
+            //$("#addForm").submit();
         }
     });
     function goToByScroll(id){
@@ -153,7 +156,7 @@
         data.append('upload', $(this).get(0).files[i]);
         data.append("path", "files/gallery");
         jQuery.ajax({
-                    url: '/AITS/system/uploadFile;jsessionid=<c:out value="${pageContext.session.id}"/>"',
+                    url: '/AITS/system/uploadFile;jsessionid=<c:out value="${pageContext.session.id}"/>',
                     data: data,
                     cache: false,
                     contentType: false,
@@ -176,7 +179,7 @@
     }
     function deleteFile(temp){
         jQuery.ajax({
-            url: '/AITS/system/do/removefile;jsessionid=<c:out value="${pageContext.session.id}"/>"',
+            url: '/AITS/system/do/removefile;jsessionid=<c:out value="${pageContext.session.id}"/>',
             cache: false,
             contentType: false,
             processData: false,
@@ -184,6 +187,49 @@
             data: 'path='+temp,
             success: function(data){
             }
+        });
+    }
+     
+    function initCKE() {
+        CKEDITOR.replace('editorEN', {
+            filebrowserBrowseUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
+            filebrowserUploadUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
+            filebrowserImageBrowseUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
+            filebrowserImageUploadUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
+            filebrowserWindowWidth  : 800,
+            filebrowserWindowHeight : 500
+        });
+        CKEDITOR.replace('editorUA', {
+            filebrowserBrowseUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
+            filebrowserUploadUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
+            filebrowserImageBrowseUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
+            filebrowserImageUploadUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
+            filebrowserWindowWidth  : 800,
+            filebrowserWindowHeight : 500
+        });
+        CKEDITOR.on('instanceReady', function() { 
+        $("#cke_editorEN iframe").webkitimageresize().webkittableresize().webkittdresize();
+        $("#cke_editorUA iframe").webkitimageresize().webkittableresize().webkittdresize();
+        
+    $(".cke_button.cke_button__image.cke_button_off").click(function(){
+        $(".cke_dialog_body").hide();
+        setTimeout(function() {   //calls click event after a certain time
+   
+    $(".cke_editor_editorEN_dialog .cke_dialog_body").addClass("image-dialog");
+    $(".cke_editor_editorUA_dialog .cke_dialog_body").addClass("image-dialog");
+    
+    if($(".cke_editor_editorUA_dialog .cke_dialog_body").hasClass("image-dialog")) {
+        $(".cke_dialog_body").show();
+    }
+    if($(".cke_editor_editorEN_dialog .cke_dialog_body").hasClass("image-dialog")) {
+        $(".cke_dialog_body").show();
+    }
+}, 500);
+    } );    
+    });
+        var obj = $("#cke_120_fileInput").contents().find(".returnImage");
+         obj.click("click", function (e) {
+            $("#cke_71_textInput").val("s2as1");
         });
     }
 </script>

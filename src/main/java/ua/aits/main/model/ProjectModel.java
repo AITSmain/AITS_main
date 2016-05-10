@@ -96,7 +96,7 @@ public class ProjectModel {
             project.setProject_img(Arrays.asList(result.getString("project_img").split("\\s*,\\s*")));
             String langs = "";
             if(!"".equals(project.project_name_en)) {
-                langs+= "RU,";
+                langs+= "UA,";
             }
             if(!"".equals(project.project_name_ua)) {
                 langs+= "EN,";
@@ -122,7 +122,7 @@ public class ProjectModel {
             project.setProject_img(Arrays.asList(result.getString("project_img").split("\\s*,\\s*")));
             String langs = "";
             if(!"".equals(project.project_name_en)) {
-                langs+= "RU,";
+                langs+= "UA,";
             }
             if(!"".equals(project.project_name_ua)) {
                 langs+= "EN,";
