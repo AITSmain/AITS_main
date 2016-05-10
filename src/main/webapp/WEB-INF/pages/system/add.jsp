@@ -136,7 +136,7 @@
                 $("#gallery-items-input").val($("#gallery-items-input").val() + 
                         ""+$(this).find(".main-img").attr("realpath") +",");
             });
-            //$("#addForm").submit();
+            $("#addForm").submit();
         }
     });
     function goToByScroll(id){
@@ -192,24 +192,14 @@
      
     function initCKE() {
         CKEDITOR.replace('editorEN', {
-            filebrowserBrowseUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserUploadUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserImageBrowseUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserImageUploadUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
             filebrowserWindowWidth  : 800,
             filebrowserWindowHeight : 500
         });
         CKEDITOR.replace('editorUA', {
-            filebrowserBrowseUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserUploadUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserImageBrowseUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserImageUploadUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
             filebrowserWindowWidth  : 800,
             filebrowserWindowHeight : 500
         });
         CKEDITOR.on('instanceReady', function() { 
-        $("#cke_editorEN iframe").webkitimageresize().webkittableresize().webkittdresize();
-        $("#cke_editorUA iframe").webkitimageresize().webkittableresize().webkittdresize();
         
     $(".cke_button.cke_button__image.cke_button_off").click(function(){
         $(".cke_dialog_body").hide();

@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 <div class="col-lg-12 margintop10 field textareas">
-                    <div></div>
+                    <div class="ck-data-box" id="CKdata"></div>
                         <div lang="textUA" class="textarea-msg"><textarea name="textUA" id="editorUA" rows="5" cols="30" class="input-block-level form-control">${project.project_descr_ua}</textarea></div>
                         <div lang="textEN" class="textarea-msg"><textarea name="textEN" id="editorEN" rows="5" cols="30" class="input-block-level form-control">${project.project_descr_en}</textarea></div>
                         <div class="validation"></div>
@@ -203,24 +203,14 @@
      
     function initCKE() {
         CKEDITOR.replace('editorEN', {
-            filebrowserBrowseUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserUploadUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserImageBrowseUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserImageUploadUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserWindowWidth  : 800,
-            filebrowserWindowHeight : 500
+            filebrowserWindowWidth  : 600,
+            filebrowserWindowHeight : 300
         });
         CKEDITOR.replace('editorUA', {
-            filebrowserBrowseUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserUploadUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserImageBrowseUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserImageUploadUrl : '${Constants.URL}tools/imageupload/${folder_str}/',
-            filebrowserWindowWidth  : 800,
-            filebrowserWindowHeight : 500
+            filebrowserWindowWidth  : 600,
+            filebrowserWindowHeight : 300
         });
         CKEDITOR.on('instanceReady', function() { 
-        $("#cke_editorEN iframe").webkitimageresize().webkittableresize().webkittdresize();
-        $("#cke_editorUA iframe").webkitimageresize().webkittableresize().webkittdresize();
         
     $(".cke_button.cke_button__image.cke_button_off").click(function(){
         $(".cke_dialog_body").hide();

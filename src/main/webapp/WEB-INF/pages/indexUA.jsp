@@ -127,7 +127,7 @@
                         <li class="slide">
                             <div class="descr-block">
                                 <h1 class="obl-h">${item.project_name_ua}</h1>
-                                <p>${item.project_descr_en}</p>   
+                                <p>${item.project_descr_ua}</p>   
                             </div>
                             <section id="slider-${item.project_id}" class="container slider-main">
                                 <div class="bxslider">
