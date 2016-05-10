@@ -109,7 +109,7 @@ public class SystemController {
             files_data = files_data.substring(0, files_data.length()-1);
         }
     	String id = Projects.insertProject(titleEN, titleUA, textEN, textUA, files_data);
-    	return new ModelAndView("redirect:" + "/system/index");
+    	return new ModelAndView("redirect:" + "/system/index;jsessionid="+request.getSession().getId());
     }
     
     @RequestMapping(value = {"/system/do/editdata", "/AITS/system/do/editdata"}, method = RequestMethod.POST)
@@ -125,14 +125,14 @@ public class SystemController {
             files_data = files_data.substring(0, files_data.length()-1);
         }
     	Projects.updateProject(project_id, titleEN, titleUA, textEN, textUA, files_data);
-    	return new ModelAndView("redirect:" + "/system/index");
+    	return new ModelAndView("redirect:" + "/system/index;jsessionid="+request.getSession().getId());
     }
     
     @RequestMapping(value = {"/AITS/system/delete/{id}","/system/delete/{id}", "/AITS/system/delete/{id}/","/system/delete/{id}/"})
     public ModelAndView deleteArticle(@PathVariable("id") String id, HttpServletRequest request, HttpServletResponse response) throws Exception {
     	request.setCharacterEncoding("UTF-8");
         Projects.deleteArticle(id);
-    	return new ModelAndView("redirect:" + "/system/index");
+    	return new ModelAndView("redirect:" + "/system/index;jsessionid="+request.getSession().getId());
     }
     
     @RequestMapping(value = {"/AITS/system/do/removefile", "/system/do/removefile", "/AITS/system/do/removefile/", "/system/do/removefile/"}, method = RequestMethod.GET)
