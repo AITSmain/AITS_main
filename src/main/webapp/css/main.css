@@ -1483,3 +1483,11 @@ margin-top: 100px;}
 .mobileIcon {
     transition: 0.5s;
 }
+
+footer .enter-link {
+    margin-left:10px;
+}
+footer .enter-link img {
+    width: 20px;
+    margin-bottom: -4px;
+}

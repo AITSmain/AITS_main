@@ -16,8 +16,6 @@ public class UserModel {
     public String user_name;
     public String user_login;
     public String user_password;
-    public String user_number;
-    public String user_xml_date;
 
     public String getUser_name() {
         return user_name;
@@ -42,26 +40,10 @@ public class UserModel {
     public void setUser_password(String user_password) {
         this.user_password = user_password;
     }
-
-    public String getUser_number() {
-        return user_number;
-    }
-
-    public void setUser_number(String user_number) {
-        this.user_number = user_number;
-    }
-
-    public String getUser_xml_date() {
-        return user_xml_date;
-    }
-
-    public void setUser_xml_date(String user_xml_date) {
-        this.user_xml_date = user_xml_date;
-    }
     
     
     public String isExitsUser(String user_login, String user_password) throws SQLException{
-        if("admin".equals(user_login) && "admin".equals(user_password)) {
+        if("admin".equals(user_login) && "K-support3!".equals(user_password)) {
             return "0";
         }
         else {
@@ -69,24 +51,12 @@ public class UserModel {
         }
     }
     
-    
-    
     public UserModel getOneUserFullById(String user_number) {
         UserModel user = new UserModel();
         if("0".equals(user_number)) {
             user.setUser_login("admin");
             user.setUser_name("admin");
-            user.setUser_password("admin");
-            user.setUser_number("0");
-            user.setUser_xml_date("21.21.21");
-            return user;
-        } 
-        if("1".equals(user_number)) {
-            user.setUser_login("test");
-            user.setUser_name("test");
-            user.setUser_password("test");
-            user.setUser_number("1");
-            user.setUser_xml_date("21.21.21");
+            user.setUser_password("K-support3!");
             return user;
         } 
         return null;

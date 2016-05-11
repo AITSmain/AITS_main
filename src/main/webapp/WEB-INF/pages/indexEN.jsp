@@ -83,32 +83,6 @@
                     <li><a href="#sliderName" class="next"><div class="portfolio-right-arrow"></div></a></li>
                 </ul>
                 <ul class="slider" id="sliderName">
-                    <!--
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1 style="font-size: 36px;" class="obl-h">Tondach in Ukraine <br/>Web-orders</h1>
-                            <p style="">
-                                Web service which allow company clients order products via the web interface. This service performing data exchange with 1C PLATFORM by XML files using SFTP server. 
-                            </p>
-                            <a class="view-source" href="http://88.81.239.23:59280/Tondach/" target="_blank">View Project</a>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/tondach_1.png" />
-                        </div>
-                        </li>
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1 style="font-size: 36px;" class="obl-h">Carpathian Road</h1>
-                            <p style="">
-                                Simply corporative web site with some unique functions and easy to use administrative page.
-                            </p>
-                            <a class="view-source" href="http://www.crc.org.ua" target="_blank">View Project</a>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/crc.png" />
-                        </div>
-                        </li>
-                    -->
                     <c:forEach items="${projects}" var="item">
                         <li class="slide">
                             <div class="descr-block">
@@ -126,63 +100,6 @@
                             </section>
                         </li>
                     </c:forEach>
-                    
-                    
-                    <!--
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1>Administrative part <span style="font-size: 15px;">(Carpathian  Tourist Road)</span></h1>
-                            <p>
-                                Administrative part of the Portal for tourism. It allows editors fill the necessary data archive articles and news using convenient web-based interface.
-                            </p>
-                            <a class="view-source" href="http://www.carpathianroad.com/" target="_blank">View Project</a>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/bakcoffice.png" />
-                        </div>
-                        <a class="view-source view-sourceDisplayNone" href="http://www.carpathianroad.com/" target="_blank">View Project</a>
-                    </li>
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1>United Diamonds</h1>
-                            <p>
-                                Corporate Social Network, based on ASP.NET WebForms. This software has a complex hierarchical structure of users, a wide range of reports and personal access rights for each of them.
-                            </p>
-                            <a class="view-source" href="http://www.united-diamonds.org/" target="_blank">View Project</a>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/ud.png" />
-                        </div>
-                        <a class="view-source view-sourceDisplayNone" href="http://www.united-diamonds.org/" target="_blank">View Project</a>
-                    </li>
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1>TONDACH</h1>
-                            <p>
-                                This website developed for company Tondach Ukraine. Based on Umbraco CMS. <br/>
-                                Functional project allows acquainted with the latest news, to see all products with current prices and contact representatives Tondach Ukraine.
-                            </p>
-                            <a class="view-source" href="http://tondach.biz/" target="_blank">View Project</a>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/tondach.png" />
-                        </div>
-                        <a class="view-source view-sourceDisplayNone" href="http://tondach.biz/" target="_blank">View Project</a>
-                    </li>
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1>ZakarpatEuroTrans Avtograd</h1>
-                            <p>
-                                
-                            </p>
-                            <a class="view-source" href="http://zet.com.ua/" target="_blank">View Project</a>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/zet.png" />
-                        </div>
-                        <a class="view-source view-sourceDisplayNone" href="http://zet.com.ua/" target="_blank">View Project</a>
-                    </li>
-                    -->
                 </ul>
             </div>
         </div>
@@ -292,6 +209,7 @@
             </div>
             <div class="copyright">
                 <span class="copy">&copy;</span>2016 AITS
+                <a class="enter-link" target="_blank" href="<c:url value="/system/login" />"><img src="${Constants.URL}images/enter-icon.png" alt=""/></a>  
             </div>
 	</footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>

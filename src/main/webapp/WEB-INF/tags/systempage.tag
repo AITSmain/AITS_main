@@ -27,6 +27,7 @@
     <meta name="author" content="">
 
     <title>Admin panel</title>
+    <link rel="shortcut icon" type="image/png" href="${Constants.URL}images/favicon.ico"/>
     <link href="${Constants.URL}css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">

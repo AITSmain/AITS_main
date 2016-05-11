@@ -15,19 +15,20 @@
         <title>AITS</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="${Constants.URL}images/favicon.ico"/>
 	<link href="${Constants.URL}css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href="${Constants.URL}css/admin.css" rel="stylesheet">
-    <style>
-        body {
-	background: #eee !important;	
-}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="${Constants.URL}css/admin.css" rel="stylesheet">
+        <style>
+            body {
+                background: #eee !important;	
+            }
 
-.wrapper {	
-	margin-top: 80px;
-  margin-bottom: 80px;
-}
-    </style>
+            .wrapper {	
+                margin-top: 80px;
+                margin-bottom: 80px;
+            }
+        </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

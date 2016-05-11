@@ -87,42 +87,6 @@
                     <li><a href="#sliderName" class="next"><div class="portfolio-right-arrow"></div></a></li>
                 </ul>
                 <ul class="slider" id="sliderName">
-                    <!--
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1 class="obl-h">TONDACH® Україна <br/>
-                                Веб-замовлення</h1>
-                            <p style="">
-                                Веб-сервіс, який дозволяє клієнтам компанії Tondach здійснювати замовлення через веб-інтерфейс. Даний сервіс взаємодіє з платформою 1С шляхом обміну файлами формату XML, використовуючи для цього SFTP сервер.
-                            </p>
-                            <a class="view-source" href="http://88.81.239.23:59280/Tondach/" target="_blank">View Project</a>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/tondach_1.png" />
-                        </div>
-                        <div class="slider1">
-                            <ul>
-                                    <li><img src="portfolio/1.png" alt=""></li>
-                                    <li><img src="portfolio/2.png" alt=""></li>
-                                    <li><img src="portfolio/3.png" alt=""></li>
-                                    <li><img src="portfolio/4.png" alt=""></li>
-                                    <li><img src="portfolio/5.png" alt=""></li>
-                            </ul>
-                        </div>
-                        </li>
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1 style="font-size: 36px;" class="obl-h">Carpathian Road</h1>
-                            <p style="">
-                                Корпоративний веб-сайт, котрий надає відвідувачам сайту ознайомитись з виконаними проектами компанії та звязатись з її представниками. 
-                            </p>
-                            <a class="view-source" href="http://www.crc.org.ua" target="_blank">View Project</a>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/crc.png" />
-                        </div>
-                        </li>
-                    -->
                     <c:forEach items="${projects}" var="item">
                         <li class="slide">
                             <div class="descr-block">
@@ -140,68 +104,6 @@
                             </section>
                         </li>
                     </c:forEach>
-                    <!--
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1>Carpathian  Tourist Road</h1>
-                            <p>
-                                Туристичний портал з глибокою структурою, що розроблений на базі платформи Java EE та фреймворку Spring MVC. Проект володіє різноманіттям функцій і дозволяє без зайвих зусиль підібрати найкращий маршрут для подорожі.
-                            </p>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/ctrNew.png" />
-                        </div>
-                        <a class="view-source view-sourceDisplayNone" href="http://www.carpathianroad.com/" target="_blank"></a>
-                    </li> 
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1>Back-офіс <br><span style="font-size: 16px;">(Carpathian  Tourist Road)</span></h1>
-                            <p>
-                                Адміністративна частина для туристичного порталу. За її допомогою редактори можуть наповнювати архів даних потрібними статтями та новинами викорситовуючи зручний web-інтерфейс.
-                            </p>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/bakcoffice.png" />
-                        </div>
-                        <a class="view-source view-sourceDisplayNone" href="http://www.carpathianroad.com/" target="_blank">Переглянути</a>
-                    </li>
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1>United Diamonds</h1>
-                            <p>
-                                Корпоративна соціальна мережа, розроблена на базі ASP.NET WebForms. Даний програмний продукт володіє складною ієрархічною структурою користувачів, широким набором звітів та персональними правами доступу для кожного з них.
-                            </p>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/ud.png" />
-                        </div>
-                        <a class="view-source view-sourceDisplayNone" href="http://www.united-diamonds.org/" target="_blank">Переглянути</a>
-                    </li>
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1>TONDACH</h1>
-                            <p>
-                                Веб-сайт розроблений для компанії Tondach Україна на основі Umbraco CMS. Функціонал проекту дозволяє не тільки ознайомитись з останніми новинами компанії, а й оглянути всі товари з актуальними на них цінами та напряму звязатись з представниками Tondach Україна.
-                            </p>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/tondach.png" />
-                        </div>
-                        <a class="view-source view-sourceDisplayNone" href="http://tondach.biz/" target="_blank">Переглянути</a>
-                    </li>
-                    <li class="slide">
-                        <div class="descr-block">
-                            <h1>ЗакарпатЕвроТранс Автоград</h1>
-                            <p>
-                                
-                            </p>
-                        </div>
-                        <div class="apple-block">
-                            <img src="portfolio/zet.png" />
-                        </div>
-                        <a class="view-source view-sourceDisplayNone" href="http://zet.com.ua/" target="_blank">Переглянути</a>
-                    </li>
-                        -->
                 </ul>
             </div>
         </div>
@@ -309,6 +211,7 @@
             </div>
             <div class="copyright">
                 <span class="copy">&copy;</span>2016 AITS
+                <a class="enter-link" target="_blank" href="<c:url value="/system/login" />"><img src="${Constants.URL}images/enter-icon.png" alt=""/></a>
             </div>
 	</footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
