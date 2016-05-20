@@ -5,6 +5,8 @@
  */
 package ua.aits.main.controller;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.sql.SQLException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,6 +24,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import org.springframework.web.bind.annotation.PathVariable;
+import ua.aits.main.functions.Helpers;
 import ua.aits.main.model.ProjectModel;
 
 /**
@@ -69,7 +72,7 @@ public class MainController {
         return model;
     }
     
-    @RequestMapping(value = {"/sendmail/", "/sendmail"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/sendmail/", "/sendmail","/AITS/sendmail/", "/AITS/sendmail"}, method = RequestMethod.GET)
     public @ResponseBody
     String sendMail(HttpServletRequest request, HttpServletResponse response) throws Exception {
         request.setCharacterEncoding("UTF-8");
@@ -101,5 +104,27 @@ public class MainController {
 	} catch (MessagingException e) {
             throw new RuntimeException(e);
 	}
+    }
+    
+    @RequestMapping(value = {"/404", "/AITS/404"})
+	public ModelAndView error404(HttpServletRequest request,
+   		 HttpServletResponse response)  {
+   	 ModelAndView model = new ModelAndView("/error/404");
+             	model.addObject("lan", "en");
+   	 return model;
+    }
+        Helpers helpers = new Helpers();
+	@RequestMapping(value = {"/500", "/AITS/500"})
+	public ModelAndView error500(HttpServletRequest request,
+   		 HttpServletResponse response)  {
+            Throwable exception = (Throwable) request.getAttribute("javax.servlet.error.exception");
+            String url = request.getRequestURL().toString() + "?" + request.getQueryString();
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            exception.printStackTrace(pw);
+            helpers.sendMail(url, sw.toString());
+   	 ModelAndView model = new ModelAndView("/error/500");
+             	model.addObject("lan", "en");
+   	 return model;
     }
 }
