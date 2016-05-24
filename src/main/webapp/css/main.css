@@ -816,6 +816,14 @@ margin-top: 100px;}
         margin-top: 10px;
     }
 
+    #mail-complete .main-text-block {
+        width: 100%;
+    }
+    #mail-complete, #mail-loading {
+        margin: auto;
+        width: 100%;
+        float: none;
+    }
     #mail-block{
         text-align: center;
         padding-bottom: 30px;
@@ -1216,7 +1224,15 @@ margin-top: 100px;}
     .main-text-block{
         margin-top: 10px;
     }
-
+    #mail-complete .main-text-block {
+        width: 100%;
+    }
+    #mail-complete, #mail-loading {
+        margin: auto;
+        width: 100%;
+        float: none;
+    }
+    
     #mail-block{
         text-align: center;
         padding-bottom: 30px;
